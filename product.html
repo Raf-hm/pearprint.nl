@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product | PearPrint</title>
+
+<link rel="stylesheet" href="src/style.css">
+
+<style>
+
+.productWrapper{
+padding:50px 0;
+}
+
+.product{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+max-width:1100px;
+margin:auto;
+align-items:start;
+}
+
+.product img{
+width:100%;
+}
+
+.title{
+font-size:42px;
+font-weight:700;
+margin:6px 0 12px;
+}
+
+.price{
+font-size:32px;
+font-weight:700;
+margin:0 0 24px;
+}
+
+.colors{
+display:grid;
+grid-template-columns:repeat(10, 32px);
+gap:10px;
+margin:10px 0 25px;
+}
+
+.color{
+width:32px;
+height:32px;
+border-radius:4px;
+border:1px solid #8e8e8e;
+cursor:pointer;
+transition:transform 0.15s, border 0.15s;
+}
+
+.color:hover{
+transform:scale(1.1);
+}
+
+.sizes{
+display:grid;
+grid-template-columns:repeat(6, 48px);
+gap:10px;
+margin:12px 0 30px;
+}
+
+.size{
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:48px;
+height:48px;
+
+border:1px solid #d0d0d0;
+border-radius:6px;
+
+font-size:14px;
+font-weight:500;
+
+cursor:pointer;
+user-select:none;
+
+transition:all 0.15s ease;
+background:white;
+}
+
+.size:hover{
+border-color:#888;
+background:#f6f6f6;
+}
+
+.size.selected{
+border:2px solid #111;
+font-weight:600;
+}
+
+.cart{
+background:#13b013;
+color:white;
+border:none;
+padding:16px;
+font-weight:600;
+width:100%;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="content">
+
+<img src="src/img/logo.svg">
+
+<nav>
+<a href="index.html">Home</a>
+<a href="catalog.html">Catalog</a>
+<a href="quote.html">Quote</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</div>
+</header>
+
+
+<div class="productWrapper">
+
+<div class="content">
+
+<div class="product">
+
+<img id="image">
+
+<div>
+
+<div class="brand" id="brand"></div>
+
+<div class="title" id="title"></div>
+
+<div class="price" id="price"></div>
+
+<div>
+<strong>Kleur</strong>
+<div class="colors" id="colors"></div>
+</div>
+
+<div>
+
+<strong>Maat</strong>
+
+<div class="sizes">
+<div class="size">XS</div>
+<div class="size">S</div>
+<div class="size">M</div>
+<div class="size">L</div>
+<div class="size">XL</div>
+</div>
+
+</div>
+
+<button class="cart">
+VOEG TOE AAN WINKELMANDJE
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script src="./src/data.js"></script>
+<script src="product.js"></script>
+
+</body>
+</html>
