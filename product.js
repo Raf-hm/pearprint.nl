@@ -3,39 +3,66 @@ const slug = params.get("product");
 
 const product = data.catalog.find(p => p.slug === slug);
 
-if(product){
+if (product) {
+    document.getElementById("title").textContent = product.name;
+    document.getElementById("price").textContent = product.price;
 
-document.getElementById("title").textContent = product.name;
-document.getElementById("price").textContent = product.price;
-document.getElementById("image").src = product.image;
+    const image = document.getElementById("image");
+    image.src = product.image;
 
-const colorContainer = document.getElementById("colors");
+    const colorContainer = document.getElementById("colors");
+    const sizeContainer = document.getElementById("sizes");
 
-product.colors.forEach(colorName => {
+    // COLORS
+    product.colors.forEach(colorName => {
+        const el = document.createElement("div");
+        el.className = "color";
+        el.style.background = data.colors[colorName];
+        el.title = colorName;
+        colorContainer.appendChild(el);
+    });
 
-const el = document.createElement("div");
-el.className = "color";
-el.style.background = data.colors[colorName];
-el.title = colorName;
+    // SIZES (DYNAMISCH)
+    product.sizes.forEach(sizeName => {
+        const el = document.createElement("div");
+        el.className = "size";
+        el.textContent = sizeName;
 
-colorContainer.appendChild(el);
+        // bredere box voor Adult / Junior
+        if (sizeName === "Adult" || sizeName === "Junior") {
+            el.style.width = "68px";
+        }
 
-});
+        el.onclick = () => {
+            document.querySelectorAll(".size").forEach(s => s.classList.remove("selected"));
+            el.classList.add("selected");
+        };
 
+        sizeContainer.appendChild(el);
+    });
 }
 
+// ------------------------
+// AFBEELDING HOOGTE / BREEDTE AANPASSEN
+function adjustImageSize() {
+    const productInfo = document.getElementById("productInfo");
+    const image = document.getElementById("image");
 
+    image.style.height = "auto";
 
+    let targetHeight = productInfo.offsetHeight;
+    image.style.height = targetHeight + "px";
 
-document.querySelectorAll(".size").forEach(size => {
+    const naturalRatio = image.naturalWidth / image.naturalHeight;
+    let computedWidth = targetHeight * naturalRatio;
 
-size.onclick = () => {
+    if (computedWidth > 450) {
+        image.style.width = "450px";
+        image.style.height = "auto";
+    } else {
+        image.style.width = "auto";
+    }
+}
 
-document.querySelectorAll(".size")
-.forEach(s => s.classList.remove("selected"));
-
-size.classList.add("selected");
-
-};
-
-});
+window.addEventListener("load", adjustImageSize);
+window.addEventListener("resize", adjustImageSize);

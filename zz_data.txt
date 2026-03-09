@@ -8,3 +8,7 @@ TShirt
 Hoodie
     Budget      
     Premium     
+
+Cap
+    Budget      https://decorabel.nl/product/houston-5-panel-printers-cap/
+    Premium      https://decorabel.nl/product/original-5-panel-cap/

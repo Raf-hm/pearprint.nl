@@ -5,91 +5,100 @@ const data = {
         {
             slug: "premium-tee",
             name: "Premium Tee",
-            description: "The highest quality for who wants to stand out.",
-            price: "€7.20",
+            description: "A heavier T-shirt with durable fabric and a clean fit. Ideal for brands that want a more premium feel.",
+            price: "€7.19",
             sizes: ["S","M","L","XL"],
             image: "src/img/catalog/bnce190.png",
 
+            // MADE
             colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
 
         {
             slug: "standard-tee",
             name: "Standard Tee",
-            description: "A great choice for any occasion.",
-            price: "€6.00",
+            description: "A reliable everyday T-shirt that balances comfort, durability and price.",
+            price: "€5.95",
             sizes: ["S","M","L","XL"],
             image: "src/img/catalog/gildanultra.png",
 
-            colors: ["white","black","sportgrey","navy"]
+            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+
         },
 
         {
             slug: "budget-tee",
             name: "Budget Tee",
-            description: "An affordable alternative, yet still of good quality.",
-            price: "€5,20",
+            description: "A lightweight and affordable option, suitable for large orders and events.",
+            price: "€4.90",
             sizes: ["S","M","L","XL"],
             image: "src/img/catalog/gildanlight.png",
 
-            colors: ["white","black","red","blue"]
+            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+
         },
 
         {
             slug: "zip-hoodie",
             name: "Zip-up Hoodie",
-            description: "Best quality zip up hoodie.",
-            price: "€33.60",
+            description: "A comfortable zip hoodie with durable fabric and a clean finish.",
+            price: "€32.90",
             sizes: ["S","M","L","XL"],
             image: "src/img/catalog/gildanzip.png",
 
-            colors: ["black","grey","navy","green"]
+            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+
         },
 
         {
-            slug: "premium-hoodie",
-            name: "Premium Hoodie",
-            description: "The highest quality hoodie for those who value comfort.",
+            slug: "classic-hoodie",
+            name: "Classic Hoodie",
+            description: "A warm hoodie with thicker fabric that feels solid and comfortable.",
             price: "€20.50",
             sizes: ["S","M","L","XL"],
             image: "src/img/catalog/gildanheavyhood.png",
 
-            colors: ["black","white","navy","red"]
+            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+
         },
 
         {
-            slug: "standard-sweater",
-            name: "Standard Sweater",
-            description: "High quality sweatshirt which works in all seasons.",
-            price: "€16.10.",
+            slug: "Crewneck-sweater",
+            name: "Crewneck Sweater",
+            description: "A clean crewneck sweatshirt with a comfortable everyday fit.",
+            price: "€15.90",
             sizes: ["S","M","L","XL"],
             image: "src/img/catalog/gildanheavysweat.png",
 
-            colors: ["black","grey","navy","red"]
+            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+
         },
 
         {
             slug: "premium-cap",
             name: "Premium Cap",
             brand: "Beechfield",
-            description: "Our premium cap, made to last forever.",
+            description: "A structured cap with a sturdy feel that keeps its shape over time.",
             price: "€4.60",
-            sizes: ["S","M","L","XL"],
+            sizes: ["Adult","Junior"],
             image: "src/img/catalog/capbeechfield.png",
 
-            colors: ["black","navy","green","grey"]
+            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+
         },
 
         {
-            slug: "budget-cap",
-            name: "Budget Cap",
+            slug: "basic-cap",
+            name: "Basic Cap",
             brand: "Result",
-            description: "An affordable alternative that still lasts.",
-            price: "€2.40",
-            sizes: ["S","M","L","XL"],
+            description: "A simple, lightweight cap that keeps costs low while still looking neat.",
+            price: "€2.39",
+            sizes: ["Adult"],
             image: "src/img/catalog/capresult.png",
 
-            colors: ["black","red","blue","white"]
+            // MADE
+            colors: ["irishgreen","aqua","heathergrey","lime","pink","fireRed","royalblue","black","darkGreen","orange","purple","white","sunflower","navy"]
+
         }
 
     ],
@@ -139,8 +148,9 @@ const data = {
         tangerine: "#f47a20",
         plum: "#5a3a54",
         darkcharcoal: "#333333",
-        white: "#f5f5f5"
-
+        white: "#f5f5f5",
+        pink: "#c489bd",
+        darkGreen: "#196638"
     }
 
 };
