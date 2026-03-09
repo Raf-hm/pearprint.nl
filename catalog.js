@@ -11,7 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="${item.image}">
             <div class="text">
                 <h3>${item.name}</h3>
+                
                 <p>${item.description}</p>
+                
+                <h4>${item.price}</h4>
             </div>
         `;
 
@@ -24,3 +27,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+//<h3>${item.name} | ${item.price}</h3>
