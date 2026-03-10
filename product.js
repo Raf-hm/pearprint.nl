@@ -17,7 +17,6 @@ if (product) {
     const colorContainer = document.getElementById("colors");
     const sizeContainer = document.getElementById("sizes");
 
-    // COLORS
     product.colors.forEach(colorName => {
 
         const el = document.createElement("div");
@@ -44,8 +43,6 @@ if (product) {
         colorContainer.appendChild(el);
     });
 
-
-    // SIZES
     product.sizes.forEach(sizeName => {
 
         const el = document.createElement("div");
@@ -70,17 +67,6 @@ if (product) {
     });
 }
 
-
-// BUTTON
-document.querySelector(".cart").onclick = () => {
-
-    console.log(selectedColor, selectedSize);
-
-};
-
-
-// ------------------------
-// AFBEELDING HOOGTE / BREEDTE AANPASSEN
 function adjustImageSize() {
 
     const productInfo = document.getElementById("productInfo");
@@ -110,8 +96,6 @@ function adjustImageSize() {
 
 window.addEventListener("load", adjustImageSize);
 window.addEventListener("resize", adjustImageSize);
-
-
 
 const modal = document.getElementById("quoteModal");
 
@@ -175,11 +159,6 @@ sendBtn.onclick = () => {
         return;
     }
 
-    if (locations.length === 0) {
-        alert("Select at least one print location");
-        return;
-    }
-
     const price = calcPrice({
         product: product,
         color: selectedColor,
@@ -188,7 +167,6 @@ sendBtn.onclick = () => {
         locations: locations
     });
 
-    // verander alleen de modalContent
     const modalContent = document.querySelector(".modalContent");
     modalContent.innerHTML = `
         <div style="text-align:center">
@@ -202,32 +180,28 @@ sendBtn.onclick = () => {
             </div>
 
             <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap">
-                <button id="getInTouch" style="background:#13b013;color:white;border:none;padding:14px 24px;font-weight:600;cursor:pointer;border-radius:6px;">
-                    Get in touch
-                </button>
-
                 <button id="newQuote" style="background:#f0f0f0;color:#111;border:none;padding:14px 24px;font-weight:600;cursor:pointer;border-radius:6px;">
                     New quote
+                </button>
+                <button id="getInTouch" style="background:#13b013;color:white;border:none;padding:14px 24px;font-weight:600;cursor:pointer;border-radius:6px;">
+                    Get in touch
                 </button>
             </div>
 
         </div>
     `;
 
-    // header blijft altijd zichtbaar en verandert naar "Estimated price"
     const modalTitle = document.querySelector(".modalTitle");
     modalTitle.textContent = "Estimated price";
 
-    // knoppen functionaliteit
     document.getElementById("getInTouch").onclick = () => {
-        window.location.href = "contact.html"; // of mailto:info@pearprint.com
+        window.location.href = "contact.html"; 
     };
 
     document.getElementById("newQuote").onclick = () => {
 
         const modalBox = document.querySelector(".modalBox");
 
-        // reset header + content naar origineel
         modalBox.innerHTML = `
             <div class="modalHeader">
                 <div class="modalTitle">Request a quote</div>
@@ -252,7 +226,6 @@ sendBtn.onclick = () => {
             </div>
         `;
 
-        // print locations opnieuw genereren
         const locationsContainer = document.getElementById("printLocations");
         product.printLocations.forEach(location => {
             const label = document.createElement("label");
@@ -264,16 +237,13 @@ sendBtn.onclick = () => {
             locationsContainer.appendChild(label);
         });
 
-        // close knop opnieuw activeren
         document.querySelector(".closeModal").onclick = () => modal.style.display = "none";
         modal.onclick = e => { if(e.target === modal) modal.style.display = "none"; };
 
-        // nieuwe click handler voor "Request quote"
         document.querySelector(".sendQuote").onclick = sendBtn.onclick;
     };
 
 };
 
-// close functionaliteit bij modal
 document.querySelector(".closeModal").onclick = () => modal.style.display = "none";
 modal.onclick = e => { if(e.target === modal) modal.style.display = "none"; };
