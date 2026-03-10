@@ -3,7 +3,11 @@ const slug = params.get("product");
 
 const product = data.catalog.find(p => p.slug === slug);
 
+let selectedColor = null;
+let selectedSize = null;
+
 if (product) {
+
     document.getElementById("title").textContent = product.name;
     document.getElementById("price").textContent = product.price;
 
@@ -15,54 +19,261 @@ if (product) {
 
     // COLORS
     product.colors.forEach(colorName => {
+
         const el = document.createElement("div");
         el.className = "color";
         el.style.background = data.colors[colorName];
         el.title = colorName;
+
+        const check = document.createElement("div");
+        check.className = "check";
+        check.textContent = "✓";
+
+        el.appendChild(check);
+
+        el.onclick = () => {
+
+            document.querySelectorAll(".color").forEach(c => {
+                c.classList.remove("selected");
+            });
+
+            el.classList.add("selected");
+            selectedColor = colorName;
+        };
+
         colorContainer.appendChild(el);
     });
 
-    // SIZES (DYNAMISCH)
+
+    // SIZES
     product.sizes.forEach(sizeName => {
+
         const el = document.createElement("div");
         el.className = "size";
         el.textContent = sizeName;
 
-        // bredere box voor Adult / Junior
         if (sizeName === "Adult" || sizeName === "Junior") {
             el.style.width = "68px";
         }
 
         el.onclick = () => {
-            document.querySelectorAll(".size").forEach(s => s.classList.remove("selected"));
+
+            document.querySelectorAll(".size").forEach(s => {
+                s.classList.remove("selected");
+            });
+
             el.classList.add("selected");
+            selectedSize = sizeName;
         };
 
         sizeContainer.appendChild(el);
     });
 }
 
+
+// BUTTON
+document.querySelector(".cart").onclick = () => {
+
+    console.log(selectedColor, selectedSize);
+
+};
+
+
 // ------------------------
 // AFBEELDING HOOGTE / BREEDTE AANPASSEN
 function adjustImageSize() {
+
     const productInfo = document.getElementById("productInfo");
     const image = document.getElementById("image");
 
     image.style.height = "auto";
 
     let targetHeight = productInfo.offsetHeight;
+
     image.style.height = targetHeight + "px";
 
     const naturalRatio = image.naturalWidth / image.naturalHeight;
+
     let computedWidth = targetHeight * naturalRatio;
 
     if (computedWidth > 450) {
+
         image.style.width = "450px";
         image.style.height = "auto";
+
     } else {
+
         image.style.width = "auto";
+
     }
 }
 
 window.addEventListener("load", adjustImageSize);
 window.addEventListener("resize", adjustImageSize);
+
+
+
+const modal = document.getElementById("quoteModal");
+
+document.querySelector(".cart").onclick = () => {
+
+    if (!selectedColor || !selectedSize) {
+        alert("Select a color and size first");
+        return;
+    }
+
+    modal.style.display = "flex";
+
+};
+
+document.querySelector(".closeModal").onclick = () => {
+    modal.style.display = "none";
+};
+
+modal.onclick = (e) => {
+    if(e.target === modal){
+        modal.style.display = "none";
+    }
+};
+
+const locationsContainer = document.getElementById("printLocations");
+
+product.printLocations.forEach(location => {
+
+    const label = document.createElement("label");
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.value = location;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(location));
+
+    locationsContainer.appendChild(label);
+
+});
+
+function calcPrice(data){
+
+    return 123.45;
+
+}
+
+const sendBtn = document.querySelector(".sendQuote");
+
+sendBtn.onclick = () => {
+
+    const quantity = document.getElementById("quantity").value;
+
+    const locations = [];
+    document
+        .querySelectorAll("#printLocations input:checked")
+        .forEach(cb => locations.push(cb.value));
+
+    if (!quantity) {
+        alert("Enter a quantity");
+        return;
+    }
+
+    if (locations.length === 0) {
+        alert("Select at least one print location");
+        return;
+    }
+
+    const price = calcPrice({
+        product: product,
+        color: selectedColor,
+        size: selectedSize,
+        quantity: Number(quantity),
+        locations: locations
+    });
+
+    // verander alleen de modalContent
+    const modalContent = document.querySelector(".modalContent");
+    modalContent.innerHTML = `
+        <div style="text-align:center">
+
+            <div style="font-size:40px;font-weight:700;margin-bottom:20px">
+                €${price}
+            </div>
+
+            <div style="color:#666;margin-bottom:30px">
+                This is an estimated price. Final pricing may vary depending on artwork and print method.
+            </div>
+
+            <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap">
+                <button id="getInTouch" style="background:#13b013;color:white;border:none;padding:14px 24px;font-weight:600;cursor:pointer;border-radius:6px;">
+                    Get in touch
+                </button>
+
+                <button id="newQuote" style="background:#f0f0f0;color:#111;border:none;padding:14px 24px;font-weight:600;cursor:pointer;border-radius:6px;">
+                    New quote
+                </button>
+            </div>
+
+        </div>
+    `;
+
+    // header blijft altijd zichtbaar en verandert naar "Estimated price"
+    const modalTitle = document.querySelector(".modalTitle");
+    modalTitle.textContent = "Estimated price";
+
+    // knoppen functionaliteit
+    document.getElementById("getInTouch").onclick = () => {
+        window.location.href = "contact.html"; // of mailto:info@pearprint.com
+    };
+
+    document.getElementById("newQuote").onclick = () => {
+
+        const modalBox = document.querySelector(".modalBox");
+
+        // reset header + content naar origineel
+        modalBox.innerHTML = `
+            <div class="modalHeader">
+                <div class="modalTitle">Request a quote</div>
+                <div class="closeModal">✕</div>
+            </div>
+
+            <div class="modalContent">
+
+                <div class="question">
+                    <strong>Where do you want the item printed?</strong>
+                    <p class="hint">Multiple options allowed</p>
+                    <div id="printLocations"></div>
+                </div>
+
+                <div class="question">
+                    <strong>How many items do you need?</strong>
+                    <input type="number" id="quantity" min="1" placeholder="Amount">
+                </div>
+
+                <button class="sendQuote">Request quote</button>
+
+            </div>
+        `;
+
+        // print locations opnieuw genereren
+        const locationsContainer = document.getElementById("printLocations");
+        product.printLocations.forEach(location => {
+            const label = document.createElement("label");
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.value = location;
+            label.appendChild(checkbox);
+            label.appendChild(document.createTextNode(location));
+            locationsContainer.appendChild(label);
+        });
+
+        // close knop opnieuw activeren
+        document.querySelector(".closeModal").onclick = () => modal.style.display = "none";
+        modal.onclick = e => { if(e.target === modal) modal.style.display = "none"; };
+
+        // nieuwe click handler voor "Request quote"
+        document.querySelector(".sendQuote").onclick = sendBtn.onclick;
+    };
+
+};
+
+// close functionaliteit bij modal
+document.querySelector(".closeModal").onclick = () => modal.style.display = "none";
+modal.onclick = e => { if(e.target === modal) modal.style.display = "none"; };

@@ -10,7 +10,8 @@ const data = {
             sizes: ["S","M","L","XL","XXL"],
             image: "src/img/catalog/bnce190.png",
 
-            // MADE
+            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve"],
+
             colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
 
@@ -22,8 +23,9 @@ const data = {
             sizes: ["S","M","L","XL","XXL"],
             image: "src/img/catalog/gildanultra.png",
 
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve"],
 
+            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
 
         {
@@ -34,8 +36,9 @@ const data = {
             sizes: ["S","M","L","XL","XXL"],
             image: "src/img/catalog/gildanlight.png",
 
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve"],
 
+            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
 
         {
@@ -46,8 +49,9 @@ const data = {
             sizes: ["S","M","L","XL","XXL"],
             image: "src/img/catalog/stoneWash.png",
 
-            colors: ["royalblue","bottlegreen","heathergrey","black","brown"]
+            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve"],
 
+            colors: ["royalblue","bottlegreen","heathergrey","black","brown"]
         },
 
         {
@@ -58,8 +62,9 @@ const data = {
             sizes: ["S","M","L","XL","XXL"],
             image: "src/img/catalog/gildanzip.png",
 
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve","Hood"],
 
+            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
 
         {
@@ -70,8 +75,9 @@ const data = {
             sizes: ["S","M","L","XL","XXL"],
             image: "src/img/catalog/gildanheavyhood.png",
 
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve","Hood"],
 
+            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
 
         {
@@ -82,8 +88,9 @@ const data = {
             sizes: ["S","M","L","XL","XXL"],
             image: "src/img/catalog/gildanheavysweat.png",
 
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve"],
 
+            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
 
         {
@@ -95,8 +102,9 @@ const data = {
             sizes: ["Adult","Junior"],
             image: "src/img/catalog/capbeechfield.png",
 
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+            printLocations: ["Front","Back","Left side","Right side"],
 
+            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
 
         {
@@ -108,9 +116,9 @@ const data = {
             sizes: ["Adult"],
             image: "src/img/catalog/capresult.png",
 
-            // MADE
-            colors: ["irishgreen","aqua","heathergrey","lime","pink","fireRed","royalblue","black","darkGreen","orange","purple","white","sunflower","navy"]
+            printLocations: ["Front","Back","Left side","Right side"],
 
+            colors: ["irishgreen","aqua","heathergrey","lime","pink","fireRed","royalblue","black","darkGreen","orange","purple","white","sunflower","navy"]
         }
 
     ],

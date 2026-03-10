@@ -54,7 +54,7 @@
         .title {
             font-size: 42px;
             font-weight: 700;
-            margin: 6px 0 12px;
+            margin: 0 0 12px;
         }
 
         .price {
@@ -74,14 +74,37 @@
             width: 32px;
             height: 32px;
             border-radius: 4px;
-            border: 1px solid #8e8e8e;
+            border: 2px solid #8e8e8e;
             cursor: pointer;
-            transition: transform 0.15s, border 0.15s;
+            transition: border 0.15s;
+            position: relative;
+        
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .color:hover {
             transform: scale(1.1);
         }
+
+        .color.selected {
+            border: 2px solid #111;
+        }
+
+        .color .check {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            display: none;
+
+            text-shadow: 0 0 3px #000
+        }
+
+        .color.selected .check {
+            display: block;
+        }
+
 
         .sizes {
             display: grid;
@@ -177,6 +200,94 @@
                 transform: scale(0.7);
             }
         }
+
+
+        
+        #quoteModal{
+            position:fixed;
+            inset:0;
+            background:rgba(0,0,0,0.45);
+            display:none;
+            align-items:center;
+            justify-content:center;
+            z-index:1000;
+        }
+
+        .modalBox{
+            background:#ece3dd;       /* achtergrond aangepast */
+            padding:34px;             /* consistent met eerste pagina */
+            width:460px;
+            border-radius:8px;
+            box-sizing:border-box;
+        }
+
+        .modalHeader{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:25px;       /* consistent margin */
+        }
+
+        .modalTitle{
+            font-size:28px;
+            font-weight:700;
+        }
+
+        .closeModal{
+            font-size:22px;
+            cursor:pointer;
+        }
+
+        .modalContent .question{
+            margin-bottom:28px;       /* consistent margin */
+        }
+
+        .hint{
+            font-size:13px;
+            color:#777;
+            margin:4px 0 14px;
+        }
+
+        #printLocations{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:8px;
+        }
+
+        #printLocations label{
+            display:flex;
+            align-items:center;
+            gap:8px;
+            cursor:pointer;
+        }
+
+        #quantity{
+            width:100%;
+            padding:12px;
+            border:1px solid #d0d0d0;
+            border-radius:4px;
+            font-size:15px;
+        }
+
+        .sendQuote{
+            background:#13b013;
+            color:white;
+            border:none;
+            padding:16px;
+            width:100%;
+            font-weight:600;
+            cursor:pointer;
+            border-radius:6px;
+        }
+
+        @media (max-width:700px){
+            .modalBox{
+                width:90%;
+            }
+            #printLocations{
+                grid-template-columns:1fr;
+            }
+        }
     </style>
 </head>
 
@@ -208,10 +319,41 @@
                         <strong>Maat</strong>
                         <div class="sizes" id="sizes"></div>
                     </div>
-                    <button class="cart">Get a quote for this item</button>
+                    <button class="cart">Get a quote in 30s!</button>
                 </div>
             </div>
         <!-- </div> -->
+    </div>
+
+    <div id="quoteModal">
+
+        <div class="modalBox">
+
+            <div class="modalHeader">
+                <div class="modalTitle">Request a quote</div>
+                <div class="closeModal">✕</div>
+            </div>
+
+            <div class="modalContent">
+
+                <div class="question">
+                    <strong>Where do you want the item printed?</strong>
+                    <p class="hint">Multiple options allowed</p>
+
+                    <div id="printLocations"></div>
+                </div>
+
+                <div class="question">
+                    <strong>How many items do you need?</strong>
+                    <input type="number" id="quantity" min="1" placeholder="Amount">
+                </div>
+
+                <button class="sendQuote">Request quote</button>
+
+            </div>
+
+        </div>
+
     </div>
 
     <script src="./src/data.js"></script>
