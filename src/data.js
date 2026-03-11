@@ -1,7 +1,5 @@
 const data = {
-
     catalog: [
-
         {
             slug: "premium-tee",
             name: "Premium Tee",

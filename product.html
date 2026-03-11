@@ -12,42 +12,39 @@
         /* ----------------------- */
         /* BASIS STYLING */
 
-
-        
         body {
             overflow-x: hidden;
             overflow-y: scroll;
         }
 
         .productWrapper {
-			margin-top: 50px;
-			position: absolute;
-			left: 50%;
-			transform: translate(-50%);
+            margin-top: 50px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
         }
 
         /* Flex container voor horizontale centrering */
         .productWrapper .content {
             display: flex;
-            justify-content: center; /* horizontaal gecentreerd */
+            justify-content: center;
             width: 100%;
         }
 
         .product {
-			/* background-color: #13b013; */
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
-            align-items: center; /* verticale centrering afbeelding */
+            align-items: center;
         }
 
         .product img {
             max-width: 450px;
             width: auto;
-            height: 100%; /* hoogte via JS */
+            height: 100%;
             object-fit: cover;
             display: block;
-            justify-self: center; /* horizontaal in grid cel */
+            justify-self: center;
         }
 
         #productInfo {
@@ -81,7 +78,6 @@
             cursor: pointer;
             transition: border 0.15s;
             position: relative;
-        
             display: flex;
             align-items: center;
             justify-content: center;
@@ -100,14 +96,12 @@
             font-size: 16px;
             font-weight: bold;
             display: none;
-
-            text-shadow: 0 0 3px #000
+            text-shadow: 0 0 3px #000;
         }
 
         .color.selected .check {
             display: block;
         }
-
 
         .sizes {
             display: grid;
@@ -155,10 +149,11 @@
 
         /* --------------------- */
         /* RESPONSIVE SCALING */
+
         @media (max-width: 1020px) {
             .product {
                 transform: scale(0.8);
-                transform-origin: top center; /* scaling startpunt */
+                transform-origin: top center;
             }
         }
 
@@ -179,7 +174,7 @@
             }
         }
 
-		@media (max-width: 550px) {
+        @media (max-width: 550px) {
             .product {
                 grid-template-columns: 1fr;
                 gap: 30px;
@@ -196,7 +191,7 @@
             }
         }
 
-		@media (max-width: 420px) {
+        @media (max-width: 420px) {
             .product {
                 grid-template-columns: 1fr;
                 gap: 30px;
@@ -204,151 +199,147 @@
             }
         }
 
+        /* --------------------- */
+        /* MODAL */
 
-        
-        #quoteModal{
-            position:fixed;
-            inset:0;
-            background:rgba(0,0,0,0.45);
-            display:none;
-            align-items:center;
-            justify-content:center;
-            z-index:1000;
+        #quoteModal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
         }
 
-        .modalBox{
-            background:#ece3dd;       /* achtergrond aangepast */
-            padding:34px;             /* consistent met eerste pagina */
-            width:460px;
-            border-radius:8px;
-            box-sizing:border-box;
+        .modalBox {
+            background: #ece3dd;
+            padding: 34px;
+            width: 460px;
+            border-radius: 8px;
+            box-sizing: border-box;
         }
 
-        .modalHeader{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            margin-bottom:25px;       /* consistent margin */
+        .modalHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
         }
 
-        .modalTitle{
-            font-size:28px;
-            font-weight:700;
+        .modalTitle {
+            font-size: 28px;
+            font-weight: 700;
         }
 
-        .closeModal{
-            font-size:22px;
-            cursor:pointer;
+        .closeModal {
+            font-size: 22px;
+            cursor: pointer;
         }
 
-        .modalContent .question{
-            margin-bottom:28px;       /* consistent margin */
+        .modalContent .question {
+            margin-bottom: 28px;
         }
 
-        .hint{
-            font-size:13px;
-            color:#777;
-            margin:4px 0 14px;
+        .hint {
+            font-size: 13px;
+            color: #777;
+            margin: 4px 0 14px;
         }
 
-        #printLocations{
-            display:grid;
-            grid-template-columns:repeat(2,1fr);
-            gap:8px;
+        #printLocations {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
         }
 
-        #printLocations label{
-            display:flex;
-            align-items:center;
-            gap:8px;
-            cursor:pointer;
+        #printLocations label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
         }
 
-        #quantity{
-            width:calc(100% - 24px);
-            padding:12px;
-            border:1px solid #d0d0d0;
-            border-radius:4px;
-            font-size:15px;
+        #quantity {
+            width: calc(100% - 24px);
+            padding: 12px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            font-size: 15px;
         }
 
-        .sendQuote{
-            background:#13b013;
-            color:white;
-            border:none;
-            padding:16px;
-            width:100%;
-            font-weight:600;
-            cursor:pointer;
-            border-radius:6px;
+        .sendQuote {
+            background: #13b013;
+            color: white;
+            border: none;
+            padding: 16px;
+            width: 100%;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 6px;
         }
 
-        @media (max-width:700px){
-            .modalBox{
-                width:90%;
+        @media (max-width: 700px) {
+            .modalBox {
+                width: 90%;
             }
-            #printLocations{
-                grid-template-columns:1fr;
+
+            #printLocations {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 
 <body>
-<header>
-    <div class="content">
-        <a href="index.html"><img src="src/img/logo.svg"></a>
+    <header>
+        <div class="content">
+            <a href="index.html"><img src="src/img/logo.svg"></a>
 
-        <nav id="navMenu">
-            <a href="index.html">Home</a>
-            <a href="catalog.html" class="active">Catalog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+            <nav id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="catalog.html" class="active">Catalog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <div class="productWrapper">
-        <!-- <div class="content"> -->
-            <div class="product">
-                <img id="image">
-                <div id="productInfo">
-                    <div class="title" id="title"></div>
-                    <div class="price" id="price"></div>
-                    <div>
-                        <strong>Kleur</strong>
-                        <div class="colors" id="colors"></div>
-                    </div>
-                    <div>
-                        <strong>Maat</strong>
-                        <div class="sizes" id="sizes"></div>
-                    </div>
-                    <button class="cart">Get a quote in 30s!</button>
+        <div class="product">
+            <img id="image">
+            <div id="productInfo">
+                <div class="title" id="title"></div>
+                <div class="price" id="price"></div>
+                <div>
+                    <strong>Kleur</strong>
+                    <div class="colors" id="colors"></div>
                 </div>
+                <div>
+                    <strong>Maat</strong>
+                    <div class="sizes" id="sizes"></div>
+                </div>
+                <button class="cart">Get a quote in 30s!</button>
             </div>
-        <!-- </div> -->
+        </div>
     </div>
 
     <div id="quoteModal">
-
         <div class="modalBox">
-
             <div class="modalHeader">
                 <div class="modalTitle">Request a quote</div>
                 <div class="closeModal">✕</div>
             </div>
 
             <div class="modalContent">
-
                 <div class="question">
                     <strong>Where do you want the item printed?</strong>
                     <p class="hint">Multiple options allowed</p>
-
                     <div id="printLocations"></div>
                 </div>
 
@@ -358,17 +349,13 @@
                 </div>
 
                 <button class="sendQuote">Request quote</button>
-
             </div>
-
         </div>
-
     </div>
 
     <script src="./src/data.js"></script>
     <script src="product.js"></script>
+    <script src="navbar.js"></script>
 </body>
 
 </html>
-
-<script src="navbar.js"></script>

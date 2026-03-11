@@ -2,13 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const grid = document.querySelector(".itemGrid");
 
-    data.catalog.forEach(item => {
+    data.catalog.forEach((item) => {
 
         const card = document.createElement("div");
         card.classList.add("item");
 
         card.innerHTML = `
             <img src="${item.image}">
+            
             <div class="text">
                 <h3>${item.name}</h3>
                 
@@ -27,5 +28,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-
-//<h3>${item.name} | ${item.price}</h3>

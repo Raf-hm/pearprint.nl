@@ -1,115 +1,110 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PearPrint | Home</title>
+<html lang="en">
 
-        <link rel="stylesheet" href="src/style.css">
-        <style>
-            html {
-                overflow-y: scroll; /* Altijd verticale scrollbar tonen */
-            }
-            .hero {
-                padding-top: 80px;
-            }
-            .hero .content {
-                display: flex;
-                justify-content: space-between;
-            }
-            .heroText {
-                max-width: 550px;
-                margin: auto 0 auto;
-            }
-            .heroText p {
-                margin: 20px 0;
-            }
-            .heroImage img {
-                width: 500px;
-                max-width: 100%;
-                border-radius: 12px;
-                box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PearPrint | Home</title>
 
-            /* .why {
-                padding-top: 80px;
-            }
-            .why .content {
-                text-align: right;
-            }
-            .why .content p {
-                margin: 20px 0;
-            } */
-            .why .content h3 {
-                margin: 80px 0 0;
-                text-align: center;
-            }
+    <link rel="stylesheet" href="src/style.css">
 
-            .scroller {
-                height: 120px;
-                width: 100%;
-                margin-top: 20px;
-                background-color: rgba(0, 0, 0, 0.03);
-                display: flex;
-            }
-            .scroller .item {
-                filter: grayscale(100%);
-                max-height: 80px;
-                max-width: 80px;
-                margin: auto 20px auto 20px;
-            }
-        </style>
-    </head>
-    <body>
-        
-<header>
-    <div class="content">
-        <a href="index.html"><img src="src/img/logo.svg"></a>
+    <style>
+        html {
+            overflow-y: scroll;
+        }
 
-        <nav id="navMenu">
-            <a href="index.html" class="active">Home</a>
-            <a href="catalog.html">Catalog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        .hero {
+            padding-top: 80px;
+        }
 
-        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+        .hero .content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .heroText {
+            max-width: 550px;
+            margin: auto 0 auto;
+        }
+
+        .heroText p {
+            margin: 20px 0;
+        }
+
+        .heroImage img {
+            width: 500px;
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .why .content h3 {
+            margin: 80px 0 0;
+            text-align: center;
+        }
+
+        .scroller {
+            height: 120px;
+            width: 100%;
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.03);
+            display: flex;
+        }
+
+        .scroller .item {
+            filter: grayscale(100%);
+            max-height: 80px;
+            max-width: 80px;
+            margin: auto 20px auto 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="content">
+            <a href="index.html">
+                <img src="src/img/logo.svg">
+            </a>
+
+            <nav id="navMenu">
+                <a href="index.html" class="active">Home</a>
+                <a href="catalog.html">Catalog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="content">
+
+            <div class="heroText">
+                <h1>High quality,<br>Low costs.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit iure, atque magnam, nesciunt </p>
+                <a href="catalog.html"><button>catalog</button></a>
+            </div>
+
+            <div class="heroImage">
+                <img src="src/img/image.png" alt="Office Image">
+            </div>
+
         </div>
     </div>
-</header>
 
-        <div class="hero">
-		    <div class="content">
-        	    <div class="heroText">
-            	    <h1>High quality,<br>Low costs.</h1>
-            	    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit iure, atque magnam, nesciunt </p>
-            	    <a href="catalog.html"><button>catalog</button></a>
-        	    </div>
-        	    <div class="heroImage">
-        	        <img src="src/img/image.png" alt="Office Image">
-        	    </div>
-            </div>
+    <div class="why">
+        <div class="content">
+            <!-- Currently empty -->
         </div>
+    </div>
 
-        <div class="why">
-            <div class="content">
-                <!-- <h2>So why choose pearprint?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem ducimus deserunt, ipsam praesentium eos doloremque distinctio similique aliquid culpa repellat nemo nihil quos eligendi incidunt dolore animi itaque minima. Illo.</p> -->
-                <!-- <h3>But don't just take our word for it!</h3> -->
-            </div>
-            <!-- <div class="scroller">
-                <img class="item" src="src/img/scroller/image1.png"></img>
-                <img class="item" src="src/img/scroller/image2.png"></img>
-                <img class="item" src="src/img/scroller/image3.png"></img>
-                <img class="item" src="src/img/scroller/image4.png"></img>
-                <img class="item" src="src/img/scroller/image5.png"></img>
-                <img class="item" src="src/img/scroller/image6.png"></img>
-                <img class="item" src="src/img/scroller/image7.png"></img>
-            </div> -->
-        </div>
-    </body>
+    <script src="navbar.js"></script>
+</body>
+
 </html>
-
-<script src="navbar.js"></script>
