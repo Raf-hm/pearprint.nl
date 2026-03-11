@@ -61,16 +61,24 @@
         </style>
     </head>
     <body>
-        <header>
-	    	<div class="content">
-            	<a href="index.html"><img src="src/img/logo.svg"></a>
-            	<nav>
-            	    <a href="index.html" class="active">Home</a>
-            	    <a href="catalog.html">Catalog</a>
-            	    <a href="contact.html">Contact</a>
-            	</nav>
-	    	</div>
-        </header>
+        
+<header>
+    <div class="content">
+        <a href="index.html"><img src="src/img/logo.svg"></a>
+
+        <nav id="navMenu">
+            <a href="index.html" class="active">Home</a>
+            <a href="catalog.html">Catalog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
 
         <div class="hero">
 		    <div class="content">
@@ -103,3 +111,5 @@
         </div>
     </body>
 </html>
+
+<script src="navbar.js"></script>
