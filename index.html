@@ -14,49 +14,228 @@
         }
 
         .hero {
-            padding-top: 80px;
+            padding: 50px 0;
         }
-
-        .hero .content {
+        
+        .heroContent {
             display: flex;
+            align-items: center;
             justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
         }
-
+        
         .heroText {
+            flex: 1 1 400px;
             max-width: 550px;
-            margin: auto 0 auto;
         }
-
+        
+        .heroText h1 {
+            font-size: 3.5rem; /* schaalbaar */
+            line-height: 1.2;
+        }
+        
         .heroText p {
             margin: 20px 0;
+            font-size: 1.2rem;
+            line-height: 1.5;
         }
-
+        
+        .heroImage {
+            flex: 1 1 400px;
+            display: flex;
+            justify-content: right;
+        }
+        
         .heroImage img {
-            width: 500px;
-            max-width: 100%;
+            width: 100%;
+            max-width: 500px;
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
+        
+        /* Responsive hero */
+        @media (max-width: 969px) {
+            .heroContent {
+                flex-direction: column; /* tekst boven, afbeelding onder */
+                text-align: center;
+            }
 
-        .why .content h3 {
-            margin: 80px 0 0;
-            text-align: center;
+            .heroText {
+                max-width: 100%;
+                flex: 1 1 0px;
+            }
+        
+            .heroImage {
+                margin-top: 30px; /* ruimte boven de afbeelding */
+                justify-content: center; /* afbeelding centreren */
+            }
+        }
+        
+        @media (max-width: 630px) {
+            .heroText h1 {
+                font-size: 2.8rem;
+            }
+        
+            .heroText p {
+                font-size: 1rem;
+            }
+        
+            button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .heroImage {
+            flex: none;
+            }
+        
+            .heroImage img {
+                width: 100%;
+                height: auto; /* behoudt de verhouding */
+            }
         }
 
-        .scroller {
-            height: 120px;
-            width: 100%;
-            margin-top: 20px;
-            background-color: rgba(0, 0, 0, 0.03);
+        /* Waarom PearPrint Sectie */
+        .whyPearPrint {
+            padding: 50px 0 60px;
+            /* background-color: #f1ebe7; */
+            background-color: rgb(243, 238, 235);
+            color: var(--D);
+        }
+
+        .whyPearPrint .sectionHeader {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .whyPearPrint h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .whyPearPrint p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .tiles {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .tile {
+            background: #ece3dd;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .tile:hover {
+            transform: translateY(-5px);
+        }
+
+        .tile img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .tile h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .tile p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .tiles {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 630px) {
+            .tiles {
+                grid-template-columns: 1fr;
+            }
+        
+            .whyPearPrint h2 {
+                font-size: 2rem;
+            }
+        
+            .whyPearPrint p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Footer */
+        .siteFooter {
+            background-color: var(--L);
+            color: var(--D);
+            padding: 20px 0;
+            box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.1);
             display: flex;
         }
 
-        .scroller .item {
-            filter: grayscale(100%);
-            max-height: 80px;
-            max-width: 80px;
-            margin: auto 20px auto 20px;
+        .siteFooter .content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 50px;
         }
+        
+        .siteFooter a {
+            color: var(--D);
+            text-decoration: underline;
+            margin: 0 5px;
+            line-height: 200%;
+        }
+
+        .siteFooter a, .siteFooter p {
+            font-size: 1.25rem;
+        }
+        
+        .siteFooter a:hover {
+            color: #5a393e;
+        }
+        
+        .siteFooter p {
+            margin: 5px 0;
+            width: max-content;
+        }
+        
+        /* Responsive */
+        @media (max-width: 480px) {
+            .siteFooter .content {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px; /* optional spacing between paragraphs */
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 630px) {
+            .siteFooter {
+                padding: 30px 20px;
+            }
+        
+            .siteFooter a {
+                /* display: inline-block; */
+                /* margin: 5px 0; */
+            }
+
+            .siteFooter a, .siteFooter p {
+                font-size: 0.95rem;
+            }
+        }
+
     </style>
 </head>
 
@@ -83,26 +262,60 @@
     </header>
 
     <div class="hero">
-        <div class="content">
-
+        <div class="content heroContent">
             <div class="heroText">
                 <h1>High quality,<br>Low costs.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit iure, atque magnam, nesciunt </p>
-                <a href="catalog.html"><button>catalog</button></a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit iure, atque magnam, nesciunt.</p>
+                <a href="catalog.html"><button>Catalog</button></a>
             </div>
-
+        
             <div class="heroImage">
                 <img src="src/img/image.png" alt="Office Image">
             </div>
-
         </div>
     </div>
 
-    <div class="why">
+    <section class="whyPearPrint">
         <div class="content">
-            <!-- Currently empty -->
+            <div class="sectionHeader">
+                <h2>Waarom PearPrint?</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat atque </p>
+            </div>
+
+            <div class="tiles">
+                <div class="tile">
+                    <img src="src/img/icons/why1.png">
+                    <h3>Fast Turnaround</h3>
+                    <p>From design upload to delivery, we get your order to you quickly and hassle-free.</p>
+                </div>
+
+                <div class="tile">
+                    <img src="src/img/icons/why2.png">
+                    <h3>High Quality with Low Prices</h3>
+                    <p>Premium & standard products delivered with top quality at prices that fit every budget.</p>
+                </div>
+
+                <div class="tile">
+                    <img src="src/img/icons/why3.png">
+                    <h3>Real-Time 24/7 Contact</h3>
+                    <p>Stay updated every step of the way via WhatsApp, we keep you informed anytime.</p>
+                </div>
+
+                <div class="tile">
+                    <img src="src/img/icons/why4.png">
+                    <h3>Climate Neutral</h3>
+                    <p>Environmentally conscious production so you can order with a clear conscience.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <footer class="siteFooter">
+        <div class="content">
+            <p>&copy; 2026 PearPrint.<br>All rights reserved.</p>
+            <p><a href="terms.html">Terms & Conditions</a></p>
+        </div>
+    </footer>
 
     <script src="navbar.js"></script>
 </body>
