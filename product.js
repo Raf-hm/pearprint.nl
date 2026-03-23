@@ -8,7 +8,7 @@ let selectedSize = null;
 
 if (product) {
     document.getElementById("title").textContent = product.name;
-    document.getElementById("price").textContent = product.price;
+    document.getElementById("price").textContent = `€${product.price.toFixed(2)}`;
 
     const image = document.getElementById("image");
     image.src = product.image;
@@ -28,6 +28,11 @@ if (product) {
         check.textContent = "✓";
         el.appendChild(check);
 
+        if (colorName === "black") {
+            el.classList.add("selected");
+            selectedColor = colorName;
+        }
+
         el.onclick = () => {
             document.querySelectorAll(".color").forEach(c => c.classList.remove("selected"));
             el.classList.add("selected");
@@ -45,6 +50,7 @@ if (product) {
 
         if (sizeName === "Adult" || sizeName === "Junior") {
             el.style.width = "68px";
+            // el.style.gridTemplateColumns = "repeat(7, 70px)"
         }
 
         el.onclick = () => {
@@ -55,6 +61,9 @@ if (product) {
 
         sizeContainer.appendChild(el);
     });
+} else {
+    // 404 product not found. (overwrite html and offer redirect to catalog.)
+    console.log("?")
 }
 
 // Afbeelding aanpassen aan hoogte product info
@@ -107,9 +116,40 @@ product.printLocations.forEach(location => {
     locationsContainer.appendChild(label);
 });
 
-// Prijs berekening (placeholder)
-function calcPrice(data) {
-    return 123.45;
+function calcPrice(dataInput) {
+    const quantity = dataInput.quantity;
+    const basePrice = dataInput.product.price;
+
+    let printCost = 0;
+
+    // Printprijzen optellen
+    dataInput.locations.forEach(location => {
+        printCost += dataInput.product.printPrices[location] || 0;
+    });
+
+    // Korting bepalen
+    let discount = 0;
+
+    if (quantity >= 100) {
+        discount = 0.20;
+    } else if (quantity >= 50) {
+        discount = 0.15;
+    } else if (quantity >= 25) {
+        discount = 0.10;
+    } else if (quantity >= 10) {
+        discount = 0.05;
+    }
+
+    // Korting alleen op printkosten
+    const discountedPrintCost = printCost * (1 - discount);
+
+    // Setupkosten
+    const setupCost = dataInput.locations.length * 7.5;
+
+    // Totaal
+    const total = ((basePrice + discountedPrintCost) * quantity) + setupCost;
+
+    return total.toFixed(2);
 }
 
 // Verzenden van quote
@@ -136,7 +176,7 @@ sendBtn.onclick = () => {
     modalContent.innerHTML = `
         <div style="text-align:center">
             <div style="font-size:40px;font-weight:700;margin-bottom:20px">
-                €${price}
+                €${price} | ${(price/quantity).toFixed(2)}/pc
             </div>
             <div style="color:#666;margin-bottom:30px">
                 This is an estimated price. Final pricing may vary depending on artwork and print method.

@@ -1,14 +1,20 @@
 https://www.iloveimg.com/remove-background
 
 TShirt
-    Budget      gildan light
-    Standard    gildan ultra
-    Premium     b&c e190
+    Budget      roly atomic 150     3.40 -> 4.29        (https://meerkleding.nl/products/roly-atomic-150-t-shirt-turquoise-12) 
+    Standard    gildan ultra        5.75 -> 6.49        (https://decorabel.nl/product/ultra-cotton-adult-t-shirt/) 
+    Premium     b&c e190            5.80 -> 7.19        (https://meerkleding.nl/products/gildan-ultra-katoen-unisex-t-shirt-black?variant=48451341025574) 
 
-Hoodie
-    Budget      
-    Premium     
+stonewashed     aliexpress          ~9,-  -> 8.95       (div ali express links)
+Tshirt LS       gildan ultra        12.35 -> 12.95       (https://decorabel.nl/product/ultra-cotton-adult-t-shirt-ls/)
+polo            fotl original       9.95  -> 10.95       (https://meerkleding.nl/products/fruit-of-the-loom-original-polo-black?_pos=1&_psq=fruit+o&_ss=e&_v=1.0)
+
+sweat
+    Standard    gildan heavy        13.20  -> 14.29      (https://decorabel.nl/product/heavy-blend-adult-crewneck-sweat/)
+    Hooded      gildan heavy        16.90  -> 17.95      (https://decorabel.nl/product/heavy-blend-hooded-sweat/)
+    zipup       gildan GNSF60       24.35  -> 25.95      (https://www.wordans.nl/gildan-gnsf60-unisex-zip-up-hoodie-547549/c20-zwart)
 
 Cap
-    Budget      https://decorabel.nl/product/houston-5-panel-printers-cap/
-    Premium      https://decorabel.nl/product/original-5-panel-cap/
+    Budget      result houston      1.90  -> 2.49       (https://decorabel.nl/product/houston-5-panel-printers-cap/)
+    Premium     Beechfield og       3.90  -> 4.49       (https://decorabel.nl/product/original-5-panel-cap/)
+

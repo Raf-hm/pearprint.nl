@@ -31,7 +31,7 @@
         }
         
         .heroText h1 {
-            font-size: 3.5rem; /* schaalbaar */
+            font-size: 3.5rem;
             line-height: 1.2;
         }
         
@@ -57,18 +57,19 @@
         /* Responsive hero */
         @media (max-width: 969px) {
             .heroContent {
-                flex-direction: column; /* tekst boven, afbeelding onder */
+                flex-direction: column;
                 text-align: center;
             }
 
             .heroText {
                 max-width: 100%;
-                flex: 1 1 0px;
+                flex: none;
+                height: auto;
             }
         
             .heroImage {
-                margin-top: 30px; /* ruimte boven de afbeelding */
-                justify-content: center; /* afbeelding centreren */
+                margin-top: 30px;
+                justify-content: center;
             }
         }
         
@@ -92,14 +93,13 @@
         
             .heroImage img {
                 width: 100%;
-                height: auto; /* behoudt de verhouding */
+                height: auto;
             }
         }
 
         /* Waarom PearPrint Sectie */
         .whyPearPrint {
             padding: 50px 0 60px;
-            /* background-color: #f1ebe7; */
             background-color: rgb(243, 238, 235);
             color: var(--D);
         }
@@ -216,7 +216,7 @@
             .siteFooter .content {
                 flex-direction: column;
                 align-items: center;
-                gap: 10px; /* optional spacing between paragraphs */
+                gap: 10px;
                 text-align: center;
             }
         }
@@ -224,11 +224,6 @@
         @media (max-width: 630px) {
             .siteFooter {
                 padding: 30px 20px;
-            }
-        
-            .siteFooter a {
-                /* display: inline-block; */
-                /* margin: 5px 0; */
             }
 
             .siteFooter a, .siteFooter p {
@@ -265,7 +260,7 @@
         <div class="content heroContent">
             <div class="heroText">
                 <h1>High quality,<br>Low costs.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit iure, atque magnam, nesciunt.</p>
+                <p>Custom merchandise for brands, teams and events. premium quality, sharp pricing, and personal support from design to delivery.</p>
                 <a href="catalog.html"><button>Catalog</button></a>
             </div>
         
@@ -278,8 +273,8 @@
     <section class="whyPearPrint">
         <div class="content">
             <div class="sectionHeader">
-                <h2>Waarom PearPrint?</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat atque </p>
+                <h2>Why PearPrint?</h2>
+                <p>Here are some of the reasons why people keep choosing pearprint for their custom merchandice!</p>
             </div>
 
             <div class="tiles">
@@ -309,6 +304,10 @@
             </div>
         </div>
     </section>
+
+    <!-- <div class="hero">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi explicabo nemo quam cumque reiciendis et voluptatem incidunt officia tenetur labore. Quae porro temporibus at, nostrum quo ut qui asperiores dicta.
+    </div> -->
 
     <footer class="siteFooter">
         <div class="content">

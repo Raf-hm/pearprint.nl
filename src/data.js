@@ -1,66 +1,167 @@
 const data = {
+    
     catalog: [
         {
-            slug: "premium-tee",
-            name: "Premium Tee",
-            description: "A heavier T-shirt with durable fabric and a clean fit. Ideal for brands that want a more premium feel.",
-            price: "€7.19",
+            slug: "your-own-item",
+            name: "Your own item",
+            description: "Already have your own item? We'll customize it for you.",
+            price: 0,
             sizes: ["S","M","L","XL","XXL"],
-            image: "src/img/catalog/bnce190.png",
+            image: "src/img/catalog/ownItem.png",
 
-            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve"],
+            printLocations: ["Front","Back","Left sleeve","Right sleeve"],
+
+            printPrices: {
+                "Front": 2,
+                "Back": 5,
+                "Left sleeve": 2,
+                "Right sleeve": 2
+            },
 
             colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
+
+
+        {
+            slug: "premium-tee",
+            name: "Premium Tee",
+            description: "A heavier T-shirt with durable fabric and a clean fit. Ideal for brands that want a more premium feel.",//
+            price: 7.19,
+            sizes: ["XS","S","M","L","XL","XXL","3XL","4XL","5XL"],
+            image: "src/img/catalog/bnce190.png",
+
+            printLocations: ["Front","Back","Left sleeve","Right sleeve"],
+
+            printPrices: {
+                "Front": 3,
+                "Back": 5,
+                "Left sleeve": 2,
+                "Right sleeve": 2
+            },
+
+            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+        },
+
 
         {
             slug: "standard-tee",
             name: "Standard Tee",
             description: "A reliable everyday T-shirt that balances comfort, durability and price.",
-            price: "€5.95",
-            sizes: ["S","M","L","XL","XXL"],
+            price: 6.49,
+            sizes: ["S","M","L","XL","XXL","3XL","4XL","5XL"],
             image: "src/img/catalog/gildanultra.png",
 
-            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve"],
+            printLocations: ["Front","Back","Left sleeve","Right sleeve"],
+
+            printPrices: {
+                "Front": 3,
+                "Back": 5,
+                "Left sleeve": 2,
+                "Right sleeve": 2
+            },
 
             colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
+
 
         {
             slug: "budget-tee",
             name: "Budget Tee",
             description: "A lightweight and affordable option, suitable for large orders and events.",
-            price: "€4.90",
-            sizes: ["S","M","L","XL","XXL"],
-            image: "src/img/catalog/gildanlight.png",
+            price: 4.29,
+            sizes: ["XS","S","M","L","XL","XXL","3XL","4XL","5XL"],
+            image: "src/img/catalog/rolyatomic150.png",
 
-            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve"],
+            printLocations: ["Front","Back","Left sleeve","Right sleeve"],
+
+            printPrices: {
+                "Front": 3,
+                "Back": 5,
+                "Left sleeve": 2,
+                "Right sleeve": 2
+            },
 
             colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
+
 
         {
             slug: "stone-washed-tee",
             name: "Stone washed shirt",
             description: "A thick T-shirt with a soft stone washed finish and a relaxed vintage look.",
-            price: "€8.95",
-            sizes: ["S","M","L","XL","XXL"],
+            price: 8.95,
+            sizes: ["XS","S","M","L","XL","XXL","3XL","4XL","5XL"],
             image: "src/img/catalog/stoneWash.png",
 
-            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve"],
+            printLocations: ["Front","Back","Left sleeve","Right sleeve"],
 
-            colors: ["royalblue","bottlegreen","heathergrey","black","brown"]
+            printPrices: {
+                "Front": 3,
+                "Back": 5,
+                "Left sleeve": 2,
+                "Right sleeve": 2
+            },
+
+            colors: ["royalblue","bottlegreen","heathergrey","black","brown","purple","pink","orange","irishgreen","sand"]
         },
 
         {
-            slug: "zip-hoodie",
-            name: "Zip-up Hoodie",
-            description: "A comfortable zip hoodie with durable fabric and a clean finish.",
-            price: "€32.90",
-            sizes: ["S","M","L","XL","XXL"],
-            image: "src/img/catalog/gildanzip.png",
+            slug: "standard-polo",
+            name: "Standard polo",
+            description: "A thick T-shirt with a soft stone washed finish and a relaxed vintage look.",
+            price: 10.95,
+            sizes: ["XS","S","M","L","XL","XXL","3XL","4XL","5XL"],
+            image: "src/img/catalog/fotloriginalpolo.png",
 
-            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve","Hood"],
+            printLocations: ["Front","Back","Left sleeve","Right sleeve"],
+
+            printPrices: {
+                "Front": 3,
+                "Back": 5,
+                "Left sleeve": 2,
+                "Right sleeve": 2
+            },
+
+            colors: ["royalblue","bottlegreen","heathergrey","black","brown","purple","pink","orange","irishgreen","sand","amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint"]
+        },
+        
+        {
+            slug: "long-sleeve-tee",
+            name: "Long sleeve shirt",
+            description: "A thick T-shirt with a soft stone washed finish and a relaxed vintage look.",
+            price: 12.95,
+            sizes: ["XS","S","M","L","XL","XXL","3XL","4XL","5XL"],
+            image: "src/img/catalog/gildanultralongsleeve.png",
+
+            printLocations: ["Front","Back","Left sleeve","Right sleeve"],
+
+            printPrices: {
+                "Front": 3,
+                "Back": 5,
+                "Left sleeve": 2,
+                "Right sleeve": 2
+            },
+
+            colors: ["royalblue","bottlegreen","heathergrey","black","brown","purple","pink","orange","irishgreen","sand","amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint"]
+        },
+
+
+        {
+            slug: "Crewneck-sweater",
+            name: "Crewneck Sweater",
+            description: "A clean crewneck sweatshirt with a comfortable everyday fit.",
+            price: 14.29,
+            sizes: ["S","M","L","XL","XXL"],
+            image: "src/img/catalog/gildanheavysweat.png",
+
+            printLocations: ["Front","Back","Left sleeve","Right sleeve"],
+
+            printPrices: {
+                "Front": 3,
+                "Back": 5,
+                "Left sleeve": 3,
+                "Right sleeve": 3,
+            },
 
             colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
@@ -69,24 +170,40 @@ const data = {
             slug: "classic-hoodie",
             name: "Classic Hoodie",
             description: "A warm hoodie with thicker fabric that feels solid and comfortable.",
-            price: "€20.50",
+            price: 17.95,
             sizes: ["S","M","L","XL","XXL"],
             image: "src/img/catalog/gildanheavyhood.png",
 
-            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve","Hood"],
+            printLocations: ["Front","Back","Left sleeve","Right sleeve","Hood"],
+
+            printPrices: {
+                "Front": 3,
+                "Back": 5,
+                "Left sleeve": 3,
+                "Right sleeve": 3,
+                "Hood": 4
+            },
 
             colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
 
         {
-            slug: "Crewneck-sweater",
-            name: "Crewneck Sweater",
-            description: "A clean crewneck sweatshirt with a comfortable everyday fit.",
-            price: "€15.90",
+            slug: "zip-hoodie",
+            name: "Zip-up Hoodie",
+            description: "A comfortable zip hoodie with durable fabric and a clean finish.",
+            price: 25.95,
             sizes: ["S","M","L","XL","XXL"],
-            image: "src/img/catalog/gildanheavysweat.png",
+            image: "src/img/catalog/gildanzip.png",
 
-            printLocations: ["Front","Back","Left chest","Right chest","Left sleeve","Right sleeve"],
+            printLocations: ["Front","Back","Left sleeve","Right sleeve","Hood"],
+
+            printPrices: {
+                "Front": 3,
+                "Back": 5,
+                "Left sleeve": 3,
+                "Right sleeve": 3,
+                "Hood": 4
+            },
 
             colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
@@ -94,32 +211,45 @@ const data = {
         {
             slug: "premium-cap",
             name: "Premium Cap",
-            brand: "Beechfield",
             description: "A structured cap with a sturdy feel that keeps its shape over time.",
-            price: "€4.60",
+            price: 4.49,
             sizes: ["Adult","Junior"],
             image: "src/img/catalog/capbeechfield.png",
 
             printLocations: ["Front","Back","Left side","Right side"],
 
+            printPrices: {
+                "Front": 3,
+                "Back": 1,
+                "Left side": 2,
+                "Right side": 2
+            },
+
             colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
+
 
         {
             slug: "basic-cap",
             name: "Basic Cap",
-            brand: "Result",
             description: "A simple, lightweight cap that keeps costs low while still looking neat.",
-            price: "€2.39",
+            price: 2.49,
             sizes: ["Adult"],
             image: "src/img/catalog/capresult.png",
 
             printLocations: ["Front","Back","Left side","Right side"],
 
+            printPrices: {
+                "Front": 3,
+                "Back": 2,
+                "Left side": 2,
+                "Right side": 1
+            },
+
             colors: ["irishgreen","aqua","heathergrey","lime","pink","fireRed","royalblue","black","darkGreen","orange","purple","white","sunflower","navy"]
         }
-
     ],
+
 
     colors: {
         red: "#d0001c",
@@ -165,5 +295,4 @@ const data = {
         black: "#1a1a1a",
         white: "#f5f5f5"
     }
-
 };

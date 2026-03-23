@@ -105,18 +105,18 @@
 
         .sizes {
             display: grid;
-            grid-auto-flow: column;
             grid-auto-columns: max-content;
             gap: 5px;
             margin: 12px 0 30px;
+            grid-template-columns: repeat(7, 54px);
         }
 
         .size {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 48px;
-            height: 48px;
+            width: 51px;
+            height: 51px;
             border: 2px solid #d0d0d0;
             border-radius: 6px;
             font-size: 14px;
@@ -125,6 +125,7 @@
             user-select: none;
             transition: all 0.15s ease;
             background: white;
+            
         }
 
         .size:hover {

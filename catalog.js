@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 <p>${item.description}</p>
                 
-                <h4>${item.price}</h4>
+                <h4>€${item.price.toFixed(2)}</h4>
             </div>
         `;
 
