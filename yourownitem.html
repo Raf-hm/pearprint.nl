@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PearPrint | Your Own Item</title>
+
+  <link rel="stylesheet" href="src/style.css">
+
+  <style>
+    .hero { padding: 50px 0; }
+    .heroText { text-align: center; }
+
+    .formContainer {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 40px 1fr 1fr 1fr 1fr 40px;
+      gap: 8px;
+      margin-bottom: 12px;
+      align-items: center;
+    }
+
+    .row span { font-weight: bold; text-align: center; }
+
+    .row input, .row select {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .removeBtn {
+      background: crimson;
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    /* first row: let dropdown take space of X */
+    .row.no-remove select {
+      grid-column: 5 / span 2;
+    }
+
+    .buttonRow {
+      display: flex;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .buttonRow button {
+      width: 100%;
+      flex: none;
+    }
+
+    .addBtn, .submitBtn {
+      background: var(--D);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #priceOutput {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="content">
+
+    <a href="index.html">
+      <img src="src/img/logo.svg">
+    </a>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+</header>
+
+<div class="hero">
+  <div class="content">
+
+    <div class="heroText">
+      <h1>Your Own Item</h1>
+      <p>Tell us what you need and get a custom quote.</p>
+    </div>
+
+    <div class="formContainer">
+
+      <div id="rows"></div>
+
+      <div class="buttonRow">
+        <button class="addBtn" onclick="addRow()">+ Add print</button>
+      </div>
+
+      <p id="priceOutput"></p>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const rowsContainer = document.getElementById("rows");
+
+  function updateNumbers() {
+    const allRows = document.querySelectorAll(".row");
+    allRows.forEach((row, index) => {
+      row.querySelector(".index").textContent = index + 1;
+
+      const removeBtn = row.querySelector(".removeBtn");
+      if (index === 0) {
+        removeBtn.style.display = "none";
+        row.classList.add("no-remove");
+      } else {
+        removeBtn.style.display = "block";
+        row.classList.remove("no-remove");
+      }
+    });
+  }
+
+  function attachListeners(row) {
+    const inputs = row.querySelectorAll("input, select");
+    inputs.forEach(el => {
+      el.addEventListener("input", calculatePrice);
+    });
+  }
+
+  function addRow() {
+    const row = document.createElement("div");
+    row.classList.add("row");
+
+    row.innerHTML = `
+      <span class="index">1</span>
+      <input type="number" placeholder="Width (cm)" min="1">
+      <input type="number" placeholder="Height (cm)" min="1">
+      <input type="number" placeholder="Quantity" value="1" min="1">
+      <select>
+        <option value="one">One color</option>
+        <option value="multi">Multi color</option>
+      </select>
+      <button class="removeBtn">X</button>
+    `;
+
+    row.querySelector(".removeBtn").onclick = () => {
+      row.remove();
+      updateNumbers();
+      calculatePrice();
+    };
+
+    rowsContainer.appendChild(row);
+    attachListeners(row);
+    updateNumbers();
+    calculatePrice();
+  }
+
+  function calculatePrice() {
+    let total = 0;
+    let hasSingle = false;
+    let hasMulti = false;
+
+    const rows = document.querySelectorAll(".row");
+    const output = document.getElementById("priceOutput");
+
+    for (let row of rows) {
+      const widthVal = row.children[1].value;
+      const heightVal = row.children[2].value;
+
+      if (!widthVal && !heightVal) {
+        output.textContent = "Please enter a height and width";
+        return;
+      }
+
+      if (!widthVal) {
+        output.textContent = "Please enter a width";
+        return;
+      }
+
+      if (!heightVal) {
+        output.textContent = "Please enter a height";
+        return;
+      }
+
+      const width = parseFloat(widthVal);
+      const height = parseFloat(heightVal);
+
+      if (width <= 0 && height <= 0) {
+        output.textContent = "Width and height must be greater than 0";
+        return;
+      }
+
+      if (width <= 0) {
+        output.textContent = "Width must be greater than 0";
+        return;
+      }
+
+      if (height <= 0) {
+        output.textContent = "Height must be greater than 0";
+        return;
+      }
+      const quantity = parseFloat(row.children[3].value) || 1;
+      const type = row.children[4].value;
+
+      const area = (width / 100) * (height / 100);
+      const totalArea = area * quantity;
+
+      if (type === "multi") {
+        total += (60 * totalArea);
+        hasMulti = true;
+      } else {
+        total += (40 * totalArea);
+        hasSingle = true;
+      }
+    }
+
+    if (hasSingle) total += 10;
+    if (hasMulti) total += 20;
+
+    output.textContent = "Estimated price: €" + total.toFixed(2);
+  }
+
+  // start with 1 row
+  addRow();
+
+  // show initial warning
+  document.getElementById("priceOutput").textContent =
+    "Please enter a height and width";
+</script>
+
+<script src="navbar.js"></script>
+
+</body>
+</html>

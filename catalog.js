@@ -20,7 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
         card.onclick = () => {
-            window.location.href = `product.html?product=${item.slug}`;
+            if(item.slug != "your-own-item") {
+                window.location.href = `product.html?product=${item.slug}`;
+            } else {
+                window.location.href = `yourownitem.html`;
+            }
         };
 
         grid.appendChild(card);

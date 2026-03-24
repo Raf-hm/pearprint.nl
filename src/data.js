@@ -8,24 +8,12 @@ const data = {
             price: 0,
             sizes: ["S","M","L","XL","XXL"],
             image: "src/img/catalog/ownItem.png",
-
-            printLocations: ["Front","Back","Left sleeve","Right sleeve"],
-
-            printPrices: {
-                "Front": 2,
-                "Back": 5,
-                "Left sleeve": 2,
-                "Right sleeve": 2
-            },
-
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
         },
-
 
         {
             slug: "premium-tee",
             name: "Premium Tee",
-            description: "A heavier T-shirt with durable fabric and a clean fit. Ideal for brands that want a more premium feel.",//
+            description: "A heavier T-shirt with durable fabric and a clean fit. Ideal for brands that want a more premium feel.",
             price: 7.19,
             sizes: ["XS","S","M","L","XL","XXL","3XL","4XL","5XL"],
             image: "src/img/catalog/bnce190.png",
@@ -39,9 +27,8 @@ const data = {
                 "Right sleeve": 2
             },
 
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+            colors: ["black","charcoal","darkGray","gray","lightGray","white","fireRed","red","burgundy","coral","tangerine","orange","sunflower","gold","mustard","lime","irishGreen","forestGreen","darkGreen","olive","sageGreen","mint","turquoise","aqua","teal","darkTeal","skyBlue","steelBlue","royalBlue","navy","lavender","lilac","purple","plum","hotPink","beige","sand","khaki","brown","chocolate","denimBlue","slateGray","offWhite","cream"]
         },
-
 
         {
             slug: "standard-tee",
@@ -60,9 +47,8 @@ const data = {
                 "Right sleeve": 2
             },
 
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+            colors: ["black","charcoal","darkGray","gray","lightGray","white","fireRed","red","burgundy","coral","tangerine","orange","sunflower","gold","amber","mustard","lime","irishGreen","forestGreen","darkGreen","olive","sageGreen","mint","turquoise","aqua","teal","darkTeal","skyBlue","steelBlue","royalBlue","navy","cobaltblue","lavender","lilac","purple","plum","hotPink","magenta","blushPink","beige","sand","khaki","brown","chocolate","denimBlue"]
         },
-
 
         {
             slug: "budget-tee",
@@ -73,7 +59,6 @@ const data = {
             image: "src/img/catalog/rolyatomic150.png",
 
             printLocations: ["Front","Back","Left sleeve","Right sleeve"],
-
             printPrices: {
                 "Front": 3,
                 "Back": 5,
@@ -81,9 +66,8 @@ const data = {
                 "Right sleeve": 2
             },
 
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+            colors: ["black","charcoal","lightGray","white","fireRed","red","tangerine","sunflower","lime","irishGreen","turquoise","royalBlue","navy","hotPink"]
         },
-
 
         {
             slug: "stone-washed-tee",
@@ -102,10 +86,10 @@ const data = {
                 "Right sleeve": 2
             },
 
-            colors: ["royalblue","bottlegreen","heathergrey","black","brown","purple","pink","orange","irishgreen","sand"]
+            colors: ["black","lightGray","beige","tangerine","irishGreen","royalBlue","hotPink","purple","brown","olive"]
         },
 
-        {
+        { 
             slug: "standard-polo",
             name: "Standard polo",
             description: "A thick T-shirt with a soft stone washed finish and a relaxed vintage look.",
@@ -122,7 +106,7 @@ const data = {
                 "Right sleeve": 2
             },
 
-            colors: ["royalblue","bottlegreen","heathergrey","black","brown","purple","pink","orange","irishgreen","sand","amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint"]
+            colors: ["black","charcoal","gray","lightGray","white","fireRed","burgundy","turquoise","skyBlue","royalBlue"]
         },
         
         {
@@ -142,11 +126,10 @@ const data = {
                 "Right sleeve": 2
             },
 
-            colors: ["royalblue","bottlegreen","heathergrey","black","brown","purple","pink","orange","irishgreen","sand","amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint"]
+            colors: ["black","charcoal","darkGray","gray","lightGray","white","fireRed","red","burgundy","tangerine","orange","sunflower","gold","lime","irishGreen","turquoise","steelBlue","royalBlue","navy","lavender","plum","beige","brown","chocolate"]
         },
 
-
-        {
+        { 
             slug: "Crewneck-sweater",
             name: "Crewneck Sweater",
             description: "A clean crewneck sweatshirt with a comfortable everyday fit.",
@@ -163,7 +146,7 @@ const data = {
                 "Right sleeve": 3,
             },
 
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+            colors: ["black","charcoal","darkGray","gray","lightGray","white","fireRed","red","burgundy","coral","tangerine","orange","gold","sunflower","lime","irishGreen","forestGreen","darkGreen","olive","turquoise","aqua","teal","skyBlue","steelBlue","royalBlue","navy","lavender","purple","plum","magenta","hotPink","beige","sand","khaki","brown","chocolate"]
         },
 
         {
@@ -184,10 +167,10 @@ const data = {
                 "Hood": 4
             },
 
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+            colors: ["black","charcoal","darkGray","gray","lightGray","white","fireRed","red","burgundy","coral","tangerine","orange","gold","sunflower","lime","irishGreen","forestGreen","darkGreen","olive","mint","turquoise","aqua","teal","skyBlue","steelBlue","royalBlue","navy","lavender","purple","plum","magenta","hotPink","beige","sand","khaki","brown","chocolate"]
         },
 
-        {
+        { 
             slug: "zip-hoodie",
             name: "Zip-up Hoodie",
             description: "A comfortable zip hoodie with durable fabric and a clean finish.",
@@ -205,7 +188,7 @@ const data = {
                 "Hood": 4
             },
 
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+            colors: ["charcoal","lightGray","royalBlue","steelBlue","navy","red","beige","khaki","olive"]
         },
 
         {
@@ -225,9 +208,8 @@ const data = {
                 "Right side": 2
             },
 
-            colors: ["amber","aqua","ash","black","bottlegreen","brown","burgundy","chocolate","cobaltblue","darkgrey","darkteal","fireRed","irishgreen","gold","lavender","mint","natural","navy","charcoal","orange","lime","lightpink","sportgrey","safetyyellow","purple","red","royalblue","sand","skyblue","sunflower","fuchsia","heathergrey","steelblue","coral","turquoise","olive","tangerine","plum","darkcharcoal","white"]
+            colors: ["fireRed","brown","lavender","irishGreen","gold","gray","lightGray","lime","sageGreen","beige","steelBlue","royalBlue","hotPink","black","forestGreen","navy","tangerine","purple","sunflower","burgundy","darkGreen","sand","white"]
         },
-
 
         {
             slug: "basic-cap",
@@ -246,53 +228,66 @@ const data = {
                 "Right side": 1
             },
 
-            colors: ["irishgreen","aqua","heathergrey","lime","pink","fireRed","royalblue","black","darkGreen","orange","purple","white","sunflower","navy"]
+            colors: ["irishGreen","turquoise","lightGray","sageGreen","lavender","fireRed","royalBlue","black","forestGreen","tangerine","purple","white","sunflower","navy"]
         }
     ],
 
-
     colors: {
-        red: "#d0001c",
-        fireRed: "#e1251b",
+        black: "#000000",
+        charcoal: "#36454f",
+        slateGray: "#708090",
+        darkGray: "#4a4a4a",
+        gray: "#808080",
+        lightGray: "#d3d3d3",
+        offWhite: "#f5f5f5",
+        white: "#ffffff",
+        burgundy: "#722f37",
+        wineRed: "#800020",
+        fireRed: "#eb251b",
+        red: "#da001d",
         coral: "#f04e37",
+        salmon: "#fa8072",
         tangerine: "#f47a20",
         orange: "#f06a00",
+        burntOrange: "#cc5500",
+        peach: "#ffe5b4",
         sunflower: "#f2dd2e",
+        mustard: "#e1ad01",
         gold: "#f2c200",
         amber: "#f2a900",
-        safetyyellow: "#e6e600",
+        beige: "#f5f5dc",
+        cream: "#fffdd0",
+        sand: "#c2b280",
+        khaki: "#c3b091",
         lime: "#8cc63e",
-        irishgreen: "#009a44",
+        appleGreen: "#8db600",
+        irishGreen: "#009a44",
+        forestGreen: "#228b22",
         darkGreen: "#196638",
         olive: "#556b2f",
-        bottlegreen: "#1f4f3f",
+        sageGreen: "#9caf88",
+        bottleGreen: "#1f4f3f",
         mint: "#cfe8e8",
         turquoise: "#3fb6c6",
         aqua: "#00a8c6",
-        darkteal: "#006d6f",
-        skyblue: "#9dc3e6",
-        steelblue: "#5f7f92",
-        royalblue: "#1f5aa6",
+        teal: "#008080",
+        darkTeal: "#006d6f",
+        skyBlue: "#9dc3e6",
+        babyBlue: "#89cff0",
+        steelBlue: "#5f7f92",
+        denimBlue: "#1560bd",
+        royalBlue: "#1f5aa6",
         cobaltblue: "#2a4ea1",
-        navy: "#2c344d",
-        lavender: "#b9a0d3",
-        purple: "#5a3a6e",
-        plum: "#5a3a54",
-        fuchsia: "#c4005a",
-        pink: "#c489bd",
-        lightpink: "#f3d3db",
-        sand: "#d7c7a7",
-        natural: "#efe6d4",
-        brown: "#4b3621",
-        chocolate: "#5a3a2e",
-        burgundy: "#6b1f2a",
-        sportgrey: "#cfcfcf",
-        ash: "#d9d9d9",
-        heathergrey: "#9c9c9c",
-        darkgrey: "#4a4a4a",
-        charcoal: "#3c3f4a",
-        darkcharcoal: "#333333",
-        black: "#1a1a1a",
-        white: "#f5f5f5"
+        navy: "#000080",
+        lavender: "#e6e6fa",
+        lilac: "#c8a2c8",
+        purple: "#800080",
+        plum: "#8e4585",
+        magenta: "#ff00ff",
+        hotPink: "#ff69b4",
+        blushPink: "#de5d83",
+        rose: "#ff007f",
+        brown: "#8b4513",
+        chocolate: "#5a3a1b"
     }
 };
