@@ -50,7 +50,7 @@ if (product) {
 
         if (sizeName === "Adult" || sizeName === "Junior") {
             el.style.width = "68px";
-            // el.style.gridTemplateColumns = "repeat(7, 70px)"
+            document.getElementById("sizes").style.gridTemplateColumns = "repeat(2, 70px)"
         }
 
         el.onclick = () => {
