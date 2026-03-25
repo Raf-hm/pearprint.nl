@@ -201,7 +201,7 @@ sendBtn.onclick = () => {
         const modalBox = document.querySelector(".modalBox");
         modalBox.innerHTML = `
             <div class="modalHeader">
-                <div class="modalTitle">Request a quote</div>
+                <div class="modalTitle">Get a quote</div>
                 <div class="closeModal">✕</div>
             </div>
             <div class="modalContent">
@@ -214,7 +214,7 @@ sendBtn.onclick = () => {
                     <strong>How many items do you need?</strong>
                     <input type="number" id="quantity" min="1" placeholder="Amount">
                 </div>
-                <button class="sendQuote">Request quote</button>
+                <button class="sendQuote">Instant quote!</button>
             </div>
         `;
 
