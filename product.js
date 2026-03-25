@@ -131,13 +131,13 @@ function calcPrice(dataInput) {
     let discount = 0;
 
     if (quantity >= 100) {
-        discount = 0.20;
-    } else if (quantity >= 50) {
         discount = 0.15;
+    } else if (quantity >= 50) {
+        discount = 0.12;
     } else if (quantity >= 25) {
-        discount = 0.10;
+        discount = 0.08;
     } else if (quantity >= 10) {
-        discount = 0.05;
+        discount = 0.04;
     }
 
     // Korting alleen op printkosten
@@ -179,7 +179,7 @@ sendBtn.onclick = () => {
                 €${price} | ${(price/quantity).toFixed(2)}/pc
             </div>
             <div style="color:#666;margin-bottom:30px">
-                This is an estimated price. Final pricing may vary depending on artwork and print method.
+                This is an estimated price. Final pricing may vary depending on the exact artwork.
             </div>
             <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap">
                 <button id="newQuote" style="background:#f0f0f0;color:#111;border:none;padding:14px 24px;font-weight:600;cursor:pointer;border-radius:6px;">

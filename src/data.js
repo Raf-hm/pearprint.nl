@@ -21,13 +21,13 @@ const data = {
             printLocations: ["Front","Back","Left sleeve","Right sleeve"],
 
             printPrices: {
-                "Front": 3,
-                "Back": 5,
+                "Front": 3.5,
+                "Back": 6,
                 "Left sleeve": 2,
                 "Right sleeve": 2
             },
 
-            colors: ["black","charcoal","darkGray","gray","lightGray","white","fireRed","red","burgundy","coral","tangerine","orange","sunflower","gold","mustard","lime","irishGreen","forestGreen","darkGreen","olive","sageGreen","mint","turquoise","aqua","teal","darkTeal","skyBlue","steelBlue","royalBlue","navy","lavender","lilac","purple","plum","hotPink","beige","sand","khaki","brown","chocolate","denimBlue","slateGray","offWhite","cream"]
+            colors: ["apricot","atoll","ashHeather","black","bottleGreen","brown","burgundy","chocolate","cobaltBlue","darkGrey","divaBlue","fireRed","kellyGreen","gold","millennialLilac","millennialMint","natural","navy","navyBlue","orange","orchidGreen","orchidPink","pacificGrey","pixelLime","radiantPurple","red","royalBlue","sand","skyBlue","solarYellow","sorbet","sportGreyHeather","stoneBlue","sunsetOrange","swimmingPool","urbanKhaki","urbanOrange","urbanPurple","usedBlack","white"]
         },
 
         {
@@ -41,13 +41,13 @@ const data = {
             printLocations: ["Front","Back","Left sleeve","Right sleeve"],
 
             printPrices: {
-                "Front": 3,
-                "Back": 5,
+                "Front": 3.5,
+                "Back": 6,
                 "Left sleeve": 2,
                 "Right sleeve": 2
             },
 
-            colors: ["black","charcoal","darkGray","gray","lightGray","white","fireRed","red","burgundy","coral","tangerine","orange","sunflower","gold","amber","mustard","lime","irishGreen","forestGreen","darkGreen","olive","sageGreen","mint","turquoise","aqua","teal","darkTeal","skyBlue","steelBlue","royalBlue","navy","cobaltblue","lavender","lilac","purple","plum","hotPink","magenta","blushPink","beige","sand","khaki","brown","chocolate","denimBlue"]
+            colors: ["ashGrey","azalea","blueDusk","cardinalRed","carolinaBlue","charcoal","cherryRed","cornsilk","daisy","darkChocolate","darkHeather","gold","heliconia","iceGrey","indigoBlue","iris","irishGreen","jadeDome","lightBlue","lightPink","lime","maroon","militaryGreen","olive","orchid","pistachio","red","royal","safetyGreen","sand","sapphire","sportGrey","stoneBlue","tan","tangerine","black","orange","purple","white","forestGreen","heatherNavy","kellyGreen","natural","navy"]
         },
 
         {
@@ -60,13 +60,13 @@ const data = {
 
             printLocations: ["Front","Back","Left sleeve","Right sleeve"],
             printPrices: {
-                "Front": 3,
-                "Back": 5,
+                "Front": 3.5,
+                "Back": 6,
                 "Left sleeve": 2,
                 "Right sleeve": 2
             },
 
-            colors: ["black","charcoal","lightGray","white","fireRed","red","tangerine","sunflower","lime","irishGreen","turquoise","royalBlue","navy","hotPink"]
+            colors: ["yellow","white","turquoise","royalBlue","rosette","red","orange","navyBlue","kellyGreen","heatherGrey","black"]
         },
 
         {
@@ -80,8 +80,8 @@ const data = {
             printLocations: ["Front","Back","Left sleeve","Right sleeve"],
 
             printPrices: {
-                "Front": 3,
-                "Back": 5,
+                "Front": 3.5,
+                "Back": 6,
                 "Left sleeve": 2,
                 "Right sleeve": 2
             },
@@ -100,13 +100,13 @@ const data = {
             printLocations: ["Front","Back","Left sleeve","Right sleeve"],
 
             printPrices: {
-                "Front": 3,
-                "Back": 5,
+                "Front": 3.5,
+                "Back": 6,
                 "Left sleeve": 2,
                 "Right sleeve": 2
             },
 
-            colors: ["black","charcoal","gray","lightGray","white","fireRed","burgundy","turquoise","skyBlue","royalBlue"]
+            colors: ["azureBlue","black","burgundy","deepNavy","heatherGrey","lightGraphite","newSkyBlue","red","royalBlue","white"]
         },
         
         {
@@ -120,13 +120,13 @@ const data = {
             printLocations: ["Front","Back","Left sleeve","Right sleeve"],
 
             printPrices: {
-                "Front": 3,
-                "Back": 5,
-                "Left sleeve": 2,
-                "Right sleeve": 2
+                "Front": 3.5,
+                "Back": 6,
+                "Left sleeve": 3,
+                "Right sleeve": 3
             },
 
-            colors: ["black","charcoal","darkGray","gray","lightGray","white","fireRed","red","burgundy","tangerine","orange","sunflower","gold","lime","irishGreen","turquoise","steelBlue","royalBlue","navy","lavender","plum","beige","brown","chocolate"]
+            colors: ["ashGrey","cardinalRed","carolinaBlue","charcoal","darkChocolate","darkHeather","gold","irishGreen","lightBlue","lightPink","maroon","red","royal","safetyGreen","sportGrey","black","orange","white","forestGreen","navy"]
         },
 
         { 
@@ -140,13 +140,13 @@ const data = {
             printLocations: ["Front","Back","Left sleeve","Right sleeve"],
 
             printPrices: {
-                "Front": 3,
-                "Back": 5,
+                "Front": 3.5,
+                "Back": 6,
                 "Left sleeve": 3,
                 "Right sleeve": 3,
             },
 
-            colors: ["black","charcoal","darkGray","gray","lightGray","white","fireRed","red","burgundy","coral","tangerine","orange","gold","sunflower","lime","irishGreen","forestGreen","darkGreen","olive","turquoise","aqua","teal","skyBlue","steelBlue","royalBlue","navy","lavender","purple","plum","magenta","hotPink","beige","sand","khaki","brown","chocolate"]
+            colors: ["antiqueCherryRed","ashGrey","carolinaBlue","charcoal","cherryRed","darkChocolate","darkHeather","garnet","gold","graphiteHeather","heliconia","indigoBlue","irishGreen","lightBlue","lightPink","maroon","militaryGreen","red","royal","safetyGreen","sand","sapphire","sportGrey","black","orange","purple","white","forestGreen","navy"]
         },
 
         {
@@ -160,14 +160,14 @@ const data = {
             printLocations: ["Front","Back","Left sleeve","Right sleeve","Hood"],
 
             printPrices: {
-                "Front": 3,
-                "Back": 5,
+                "Front": 3.5,
+                "Back": 6,
                 "Left sleeve": 3,
                 "Right sleeve": 3,
                 "Hood": 4
             },
 
-            colors: ["black","charcoal","darkGray","gray","lightGray","white","fireRed","red","burgundy","coral","tangerine","orange","gold","sunflower","lime","irishGreen","forestGreen","darkGreen","olive","mint","turquoise","aqua","teal","skyBlue","steelBlue","royalBlue","navy","lavender","purple","plum","magenta","hotPink","beige","sand","khaki","brown","chocolate"]
+            colors: ["antiqueCherryRed","antiqueSapphire","ashGrey","azalea","carolinaBlue","charcoal","cherryRed","darkChocolate","darkHeather","garnet","gold","graphiteHeather","heliconia","indigoBlue","irishGreen","lightBlue","lightPink","maroon","militaryGreen","mintGreen","orchid","red","royal","safetyGreen","sand","sapphire","sportGrey","violet","black","orange","purple","white","forestGreen","navy"]
         },
 
         { 
@@ -181,14 +181,14 @@ const data = {
             printLocations: ["Front","Back","Left sleeve","Right sleeve","Hood"],
 
             printPrices: {
-                "Front": 3,
-                "Back": 5,
+                "Front": 3.5,
+                "Back": 6,
                 "Left sleeve": 3,
                 "Right sleeve": 3,
                 "Hood": 4
             },
 
-            colors: ["charcoal","lightGray","royalBlue","steelBlue","navy","red","beige","khaki","olive"]
+            colors: ["royal","sportGrey","brokenWhite","red","sand","stoneBlue","militaryGreen","navy","black"]
         },
 
         {
@@ -208,7 +208,7 @@ const data = {
                 "Right side": 2
             },
 
-            colors: ["fireRed","brown","lavender","irishGreen","gold","gray","lightGray","lime","sageGreen","beige","steelBlue","royalBlue","hotPink","black","forestGreen","navy","tangerine","purple","sunflower","burgundy","darkGreen","sand","white"]
+            colors: ["brightRed","chocolate","classicPink","emerald","gold","graphiteGrey","lightGrey","limeGreen","oliveGreen","sand","skyBlue","surfBlue","fuchsia","black","bottleGreen","brightRoyal","orange","purple","white","yellow","burgundy","kellyGreen","natural"]
         },
 
         {
@@ -228,66 +228,112 @@ const data = {
                 "Right side": 1
             },
 
-            colors: ["irishGreen","turquoise","lightGray","sageGreen","lavender","fireRed","royalBlue","black","forestGreen","tangerine","purple","white","sunflower","navy"]
+            colors: ["appleGreen","aqua","doveGrey","lime","pink","red","royal","black","bottleGreen","orange","purple","white","yellow","navy"]
         }
     ],
 
     colors: {
-        black: "#000000",
-        charcoal: "#36454f",
-        slateGray: "#708090",
-        darkGray: "#4a4a4a",
-        gray: "#808080",
-        lightGray: "#d3d3d3",
-        offWhite: "#f5f5f5",
-        white: "#ffffff",
-        burgundy: "#722f37",
-        wineRed: "#800020",
-        fireRed: "#eb251b",
-        red: "#da001d",
-        coral: "#f04e37",
-        salmon: "#fa8072",
-        tangerine: "#f47a20",
-        orange: "#f06a00",
-        burntOrange: "#cc5500",
-        peach: "#ffe5b4",
-        sunflower: "#f2dd2e",
-        mustard: "#e1ad01",
-        gold: "#f2c200",
-        amber: "#f2a900",
-        beige: "#f5f5dc",
-        cream: "#fffdd0",
-        sand: "#c2b280",
-        khaki: "#c3b091",
-        lime: "#8cc63e",
-        appleGreen: "#8db600",
-        irishGreen: "#009a44",
-        forestGreen: "#228b22",
-        darkGreen: "#196638",
-        olive: "#556b2f",
-        sageGreen: "#9caf88",
-        bottleGreen: "#1f4f3f",
-        mint: "#cfe8e8",
-        turquoise: "#3fb6c6",
-        aqua: "#00a8c6",
-        teal: "#008080",
-        darkTeal: "#006d6f",
-        skyBlue: "#9dc3e6",
-        babyBlue: "#89cff0",
-        steelBlue: "#5f7f92",
-        denimBlue: "#1560bd",
-        royalBlue: "#1f5aa6",
-        cobaltblue: "#2a4ea1",
-        navy: "#000080",
-        lavender: "#e6e6fa",
-        lilac: "#c8a2c8",
+        apricot: "#F4A300",
+        atoll: "#1F8FA3",
+        ashHeather: "#D9D9D9",
+        black: "#2B2B2B",
+        bottleGreen: "#2F5D3A",
+        brown: "#4A3A33",
+        burgundy: "#6E2C3A",
+        chocolate: "#5A3A2E",
+        cobaltBlue: "#2F4FA2",
+        darkGrey: "#55585C",
+        divaBlue: "#1C7A8C",
+        fireRed: "#E1251B",
+        kellyGreen: "#1F8F4E",
+        gold: "#F2C200",
+        millennialLilac: "#A79BCB",
+        millennialMint: "#BFD9D3",
+        natural: "#E9E2D6",
+        navy: "#2E3440",
+        navyBlue: "#2A3F7A",
+        orange: "#F26A00",
+        orchidGreen: "#7FA35A",
+        orchidPink: "#E6A8C8",
+        pacificGrey: "#BFC3C7",
+        pixelLime: "#B7D430",
+        radiantPurple: "#5B4A6E",
+        red: "#D60C2E",
+        royalBlue: "#1F4FA3",
+        sand: "#D8C6A6",
+        skyBlue: "#8FB6D9",
+        solarYellow: "#E5E600",
+        sorbet: "#d60064",
+        sportGreyHeather: "#CFCFCF",
+        stoneBlue: "#6F8A9B",
+        sunsetOrange: "#F36C21",
+        swimmingPool: "#3FA7B3",
+        urbanKhaki: "#7A6A4F",
+        urbanOrange: "#E85C0D",
+        urbanPurple: "#5A4A63",
+        usedBlack: "#3A3A3A",
+        white: "#F5F5F5",
+        ashGrey: "#B2BEB5",
+        azalea: "#F7C6C7",
+        blueDusk: "#4A6FA5",
+        cardinalRed: "#C41E3A",
+        carolinaBlue: "#56A0D3",
+        charcoal: "#36454F",
+        cherryRed: "#DE3163",
+        cornsilk: "#FFF8DC",
+        daisy: "#FFFF31",
+        darkChocolate: "#3F2A14",
+        darkHeather: "#A9A9A9",
+        heliconia: "#FF3855",
+        iceGrey: "#E8ECEF",
+        indigoBlue: "#3F48CC",
+        iris: "#5A4FCF",
+        irishGreen: "#009A44",
+        jadeDome: "#00A86B",
+        lightBlue: "#ADD8E6",
+        lightPink: "#FFB6C1",
+        lime: "#00FF00",
+        maroon: "#800000",
+        militaryGreen: "#4B5320",
+        olive: "#808000",
+        orchid: "#DA70D6",
+        pistachio: "#93C572",
+        royal: "#4169E1",
+        safetyGreen: "#00FF7F",
+        sapphire: "#0F52BA",
+        sportGrey: "#C0C0C0",
+        tan: "#D2B48C",
+        tangerine: "#F28500",
         purple: "#800080",
-        plum: "#8e4585",
-        magenta: "#ff00ff",
-        hotPink: "#ff69b4",
-        blushPink: "#de5d83",
-        rose: "#ff007f",
-        brown: "#8b4513",
-        chocolate: "#5a3a1b"
+        forestGreen: "#228B22",
+        heatherNavy: "#2A3B5F",
+        yellow: "#FFFF00",
+        turquoise: "#40E0D0",
+        rosette: "#FF66CC",
+        heatherGrey: "#B6B6B6",
+        azureBlue: "#007FFF",
+        deepNavy: "#00005A",
+        lightGraphite: "#A8A9AD",
+        newSkyBlue: "#76D7EA",
+        antiqueCherryRed: "#9E1B32",
+        garnet: "#733635",
+        graphiteHeather: "#6E6E6E",
+        mintGreen: "#98FF98",
+        violet: "#8F00FF",
+        brokenWhite: "#F8F8F0",
+        appleGreen: "#8DB600",
+        aqua: "#00FFFF",
+        doveGrey: "#6D6D6D",
+        pink: "#FFC0CB",
+        brightRed: "#FF2400",
+        classicPink: "#F4C2C2",
+        emerald: "#50C878",
+        graphiteGrey: "#474A51",
+        lightGrey: "#D3D3D3",
+        limeGreen: "#32CD32",
+        oliveGreen: "#556B2F",
+        surfBlue: "#00AEEF",
+        fuchsia: "#FF00FF",
+        brightRoyal: "#4169E1"
     }
 };
